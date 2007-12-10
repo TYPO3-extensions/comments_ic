@@ -1,3 +1,7 @@
+2007-12-10 Dmitry Dulepov  <dmitry@typo3.org>
+
+	* Fixed: closing comments for tt_news was not working
+
 2007-11-15 Dmitry Dulepov  <dmitry@typo3.org>
 
 	* Created

@@ -3,7 +3,7 @@
 ########################################################################
 # Extension Manager/Repository config file for ext: "comments_ic"
 #
-# Auto generated 10-12-2007 17:03
+# Auto generated 07-01-2008 15:45
 #
 # Manual updates:
 # Only the data in the array - anything else is removed by next write.
@@ -29,7 +29,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
 	'author_company' => 'Netcreators BV',
-	'version' => '1.0.2',
+	'version' => '1.0.3',
 	'constraints' => array(
 		'depends' => array(
 			'php' => '5.0.0-0.0.0',
@@ -42,7 +42,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'commerce' => '',
 		),
 	),
-	'_md5_values_when_last_written' => 'a:7:{s:9:"ChangeLog";s:4:"fbf2";s:29:"class.tx_commentsic_hooks.php";s:4:"acc0";s:12:"ext_icon.gif";s:4:"ee94";s:17:"ext_localconf.php";s:4:"1470";s:14:"ext_tables.php";s:4:"ac74";s:14:"ext_tables.sql";s:4:"9a75";s:16:"locallang_db.xml";s:4:"705d";}',
+	'_md5_values_when_last_written' => 'a:7:{s:9:"ChangeLog";s:4:"aa14";s:29:"class.tx_commentsic_hooks.php";s:4:"acc0";s:12:"ext_icon.gif";s:4:"ee94";s:17:"ext_localconf.php";s:4:"1470";s:14:"ext_tables.php";s:4:"1086";s:14:"ext_tables.sql";s:4:"9a75";s:16:"locallang_db.xml";s:4:"705d";}',
 	'suggests' => array(
 	),
 );

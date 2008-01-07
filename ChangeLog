@@ -1,6 +1,7 @@
 2008-01-07 Dmitry Dulepov  <dmitry@typo3.org>
 
 	* Fixed: some system had problems with default value for tt_news item
+	* Released version 1.0.3
 
 2007-12-10 Dmitry Dulepov  <dmitry@typo3.org>
 

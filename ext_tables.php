@@ -24,7 +24,6 @@ $tempColumns = array (
 			'max'      => '20',
 			'eval'     => 'datetime',
 			'checkbox' => '0',
-			'default'  => PHP_INT_MAX,
 		)
 	),
 );

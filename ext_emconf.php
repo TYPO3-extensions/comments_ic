@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Comments: individual closing',
-	'description' => 'Adds individual closing of comments for tt_news and commerce products',
+	'description' => 'Adds individual closing of comments for tt_news and commerce products. Public free support is provided only through TYPO3 mailing lists! Contact by e-mail for commercial support.',
 	'category' => 'fe',
 	'author' => 'Dmitry Dulepov [netcreators]',
 	'author_email' => 'dmitry@typo3.org',
@@ -32,10 +32,11 @@ $EM_CONF[$_EXTKEY] = array(
 	'version' => '1.0.3',
 	'constraints' => array(
 		'depends' => array(
-			'php' => '5.0.0-0.0.0',
-			'comments' => '0.9.0-',
+			'php' => '5.1.0-0.0.0',
+			'comments' => '1.3.0-',
 		),
 		'conflicts' => array(
+			'comments' => '0.0.0-1.2.999',
 		),
 		'suggests' => array(
 			'tt_news' => '',

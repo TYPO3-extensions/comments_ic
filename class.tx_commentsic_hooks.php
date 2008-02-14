@@ -50,23 +50,22 @@
  */
 class tx_commentsic_hooks {
 	/**
-	 * Provides comment closing date to comments extension for tt_news items
+	 * Provides comment closing date to comments extension for various extensions
 	 *
 	 * @param	array	$params	Parameters to the function
 	 * @param	tx_comments_pi1	$pObj	Parent object
+	 * @return	mixed	Closing timestamp or false if unknown
+	 * @see	tx_comments_pi1::isCommentingClosed()
 	 */
-	function ttNewsHook(&$params, &$pObj) {
-		return $this->getCloseTime('tt_news', $params['uid'], $pObj->cObj);
-	}
-
-	/**
-	 * Provides comment closing date to comments extension for commerce products
-	 *
-	 * @param	array	$params	Parameters to the function
-	 * @param	tx_comments_pi1	$pObj	Parent object
-	 */
-	function commerceProductHook(&$params, &$pObj) {
-		return $this->getCloseTime('tx_commerce_products', $params['uid'], $pObj->cObj);
+	function hookFunc(&$params, &$pObj) {
+		$result = false;
+		switch ($params['table']) {
+			case 'tt_news':
+			case 'tx_commerce_products':
+				$result = $this->getCloseTime($params['table'], $params['uid'], $pObj->cObj);
+				break;
+		}
+		return $result;
 	}
 
 	/**
@@ -75,10 +74,10 @@ class tx_commentsic_hooks {
 	 * @param	string	$table	Table name
 	 * @param	int	$uid	UID of the record
 	 * @param	tslib_cObj	$cObj	COBJECT
-	 * @return	int	Closing timestamp
+	 * @return	mixed	Closing timestamp or false if unknown
 	 */
 	private function getCloseTime($table, $uid, &$cObj) {
-		$result = 0;
+		$result = false;
 		$recs = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows('tx_commentsic_disable,tx_commentsic_closetime',
 					$table, 'uid=' . intval($uid) . $cObj->enableFields($table));
 		if (count($recs)) {
